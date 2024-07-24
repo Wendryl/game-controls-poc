@@ -10,4 +10,14 @@ ctx.fillStyle = '#0022ff';
 ctx.fillRect(0, 0, width, height);
 
 const controls = document.getElementById("controls");
-controls
+
+// TODO - Add full-screen button toggle
+/** document.addEventListener(
+  "keydown",
+  e => {
+    if (e.key === "Enter") {
+      document.documentElement.requestFullscreen();
+    }
+  },
+  false
+); **/
