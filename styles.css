@@ -12,6 +12,9 @@
   padding: 0;
   font-family: "Pixelify Sans";
   font-size: 16px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 canvas {
@@ -45,7 +48,7 @@ canvas {
   border: 2px solid var(--btn-outline);
   box-shadow: 0 4px 0 var(--btn-outline);
   border-radius: var(--btn-radius);
-  transition: all 30ms ease-in-out;
+  transition: all 2ms ease-in-out;
   width: 3rem;
   height: 3rem;
 }
@@ -75,6 +78,7 @@ canvas {
   box-shadow: 0 4px 0 var(--btn-outline);
   background: var(--btn-bg);
   border-radius: var(--btn-radius);
+  transition: all 2ms ease-in-out;
 }
 
 #dpad button:active {
