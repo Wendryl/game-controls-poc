@@ -10,39 +10,6 @@ window.onload = () => {
   ctx.fillStyle = '#000';
   ctx.fillRect(0, 0, width, height);
 
-  const controls = document.getElementById("controls");
-  const joystick = document.getElementById("joystick");
-  const stick = document.querySelector("#joystick > button");
-
-  joystick.onpointermove = (e) => {
-    const joystickInfo = joystick.getBoundingClientRect();
-    const xOffset = Math.abs(joystickInfo.x + joystickInfo.width / 2 - e.clientX);
-    const yOffset = Math.abs(joystickInfo.y + joystickInfo.height / 2 - e.clientY);
-
-    if (e.target.tagName === "DIV") {
-      stick.style.position = "absolute";
-      stick.style.top = "50%";
-      stick.style.left = "50%";
-      return;
-    }
-
-    if (xOffset <= 30) {
-      stick.style.left = e.clientX + "px";
-    }
-
-    if (yOffset <= 30) {
-      stick.style.top = e.clientY + "px";
-    }
-
-    stick.style.position = "fixed";
-  };
-
-  joystick.onpointerup = (e) => {
-    stick.style.position = "absolute";
-    stick.style.top = "50%";
-    stick.style.left = "50%";
-  }
-
   // TODO - Add full-screen button toggle
   /** document.addEventListener(
   "keydown",
